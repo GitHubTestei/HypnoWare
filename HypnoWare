@@ -1,0 +1,111 @@
+-- HypnoWare CreateASP and rip_bozoXezXez on Roblox
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local NoclipBtools = Instance.new("TextButton")
+local FlySpeed = Instance.new("TextButton")
+local Teleport = Instance.new("TextButton")
+local close = Instance.new("TextButton")
+local openmain = Instance.new("Frame")
+local open = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(53, 0, 0)
+main.Position = UDim2.new(0.0871602595, 0, 0.342574269, 0)
+main.Size = UDim2.new(0, 271, 0, 321)
+main.Visible = false
+main.Active = true
+main.Draggable = true
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.Size = UDim2.new(0, 271, 0, 36)
+TextLabel.Font = Enum.Font.FredokaOne
+TextLabel.Text = "HypnoWare"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+NoclipBtools.Name = "NoclipBtools"
+NoclipBtools.Parent = main
+NoclipBtools.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+NoclipBtools.Position = UDim2.new(0.162361622, 0, 0.183800623, 0)
+NoclipBtools.Size = UDim2.new(0, 182, 0, 31)
+NoclipBtools.Font = Enum.Font.FredokaOne
+NoclipBtools.Text = "Noclip/Btools"
+NoclipBtools.TextColor3 = Color3.fromRGB(0, 0, 0)
+NoclipBtools.TextSize = 14.000
+NoclipBtools.MouseButton1Down:connect(function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/GitHubTestei/HypnoWare-robloxexploit/main/HypnoWareNoclipV1.1"))()
+end)
+
+FlySpeed.Name = "FlySpeed"
+FlySpeed.Parent = main
+FlySpeed.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+FlySpeed.Position = UDim2.new(0.162361622, 0, 0.451713383, 0)
+FlySpeed.Size = UDim2.new(0, 182, 0, 31)
+FlySpeed.Font = Enum.Font.FredokaOne
+FlySpeed.Text = "Fly/Speed"
+FlySpeed.TextColor3 = Color3.fromRGB(0, 0, 0)
+FlySpeed.TextSize = 14.000
+FlySpeed.MouseButton1Down:connect(function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/GitHubTestei/FlyAndWalkspeed/main/FlyAndSpeed"))()
+end)
+
+Teleport.Name = "Teleport"
+Teleport.Parent = main
+Teleport.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+Teleport.Position = UDim2.new(0.162361622, 0, 0.710280359, 0)
+Teleport.Size = UDim2.new(0, 182, 0, 31)
+Teleport.Font = Enum.Font.FredokaOne
+Teleport.Text = "Teleport (Type full user)"
+Teleport.TextColor3 = Color3.fromRGB(0, 0, 0)
+Teleport.TextSize = 14.000
+Teleport.MouseButton1Down:connect(function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/GitHubTestei/HypnoWareTeleport/main/HypoWareTeleport"))()
+end)
+
+close.Name = "close"
+close.Parent = main
+close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+close.Position = UDim2.new(0.867158651, 0, 0, 0)
+close.Size = UDim2.new(0, 36, 0, 36)
+close.Font = Enum.Font.FredokaOne
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(0, 0, 0)
+close.TextScaled = true
+close.TextSize = 14.000
+close.TextWrapped = true
+close.MouseButton1Down:connect(function()
+	main.Visible = false
+	openmain.Visible = true
+end)
+
+openmain.Name = "openmain"
+openmain.Parent = ScreenGui
+openmain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+openmain.Position = UDim2.new(0, 0, 0.318811893, 0)
+openmain.Size = UDim2.new(0, 80, 0, 26)
+openmain.Active = true
+openmain.Draggable = true
+
+open.Name = "open"
+open.Parent = openmain
+open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+open.Size = UDim2.new(0, 80, 0, 26)
+open.Font = Enum.Font.FredokaOne
+open.Text = "OPEN~"
+open.TextColor3 = Color3.fromRGB(0, 0, 0)
+open.TextSize = 17.000
+open.TextWrapped = true
+open.MouseButton1Down:connect(function()
+	openmain.Visible = false
+	main.Visible = true
+end)
